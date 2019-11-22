@@ -1,0 +1,19 @@
+using System;
+
+namespace cicloautomatico
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+
+			int x ;
+
+			for (x = 1; x <= 10; x=x+1)
+         Console.WriteLine(" " + x);
+				
+          	Console.ReadKey();  		
+	
+		}
+	}
+}
