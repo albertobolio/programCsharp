@@ -1,0 +1,30 @@
+/* Aprender a Programar  en Proyecto de Consola */
+
+using System; /* utiliza la caja de herramientas(System) que vas a utilizar (Directiva)es donde estan las clases del sistema */
+
+namespace Prueba1   /* Nombre del Proyecto o Solucion son palabras reservadas (namespace o using */
+
+/* Las llaves definen una estrcutura  llave que abre - llave que cierra */
+{  
+    class MainClass /* Las clases definen los atributos y funcionalidades */
+
+  {
+     public static void Main(String[] args) /* (La firma del Metodo)
+     Metodo  Main define los atributos (public-cualquiera tiene acceso dentro de la estructura -metodo-),
+     (static le dice a Csharp que lo mantenga en memoria),(void-que no devuelve nada),(Parametros de entrada String[],args)*/
+        
+        {
+
+          Console.WriteLine("Hola Mundo");/* (Clase Console) la primera letra en Mayuscula para distinguir que es Clase */
+          Console.Write("Oprime Cualquier tecla para Continuar.");/* El punto despues de la Clase significa que voy a 
+          entrar a una de las funciones o propiedades de la clase Console. */ 
+          */
+         
+         Console.ReadKey();
+
+        }
+
+    }
+
+
+}
