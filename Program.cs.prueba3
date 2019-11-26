@@ -1,4 +1,4 @@
-using System;
+ using System;
 
 namespace Prueba1
 
@@ -10,13 +10,41 @@ namespace Prueba1
         public static void Main(String[] args)
         {
             String nombre;
+            int x; //Contador para el ciclo automático
+            int[]vector;//Vector con dimensión por el usuario
 
+            int n=0; //Dimension del vector dado por el usuario
 
             Console.Write("Escribe tu nombre: ");
-            nombre=Console.ReadLine();
-            Console.WriteLine("Hola {0}, que tengas un excelente día",nombre );
+            nombre = Console.ReadLine();
+            Console.WriteLine("Hola {0}, que tengas un excelente día", nombre);
+
+            Console.WriteLine(" ");
+            Console.Write("Escribe la dimensión del vector: ");
+            n= int.Parse(Console.ReadLine());//Da valor a la dimensión del vector
+            vector = new int[n];
+            for(x=0;x<n;x=x+1) //Inicia el ciclo de captura del vector
+            {
+
+                Console.Write("Teclea el ValorVector {0}: ", x);
+                vector[x] = int.Parse(Console.ReadLine()); //Captura cada valor del Vector
+            }
+            Console.WriteLine("Oprime una tecla para continuar: ");
+            Console.ReadKey();
+            //Ahora se imprimen los valores del Vector
+            Console.Clear();//Se limpia la captura
+
+
+            for (x = 0; x < n; x = x + 1)
+                Console.WriteLine("Los valores son :[{0}] ", vector[x]);
+
+            Console.Write("Oprime una tecla para continuar: ");
+            Console.ReadKey();
+
+           
 
              
+
         }
 
     }
