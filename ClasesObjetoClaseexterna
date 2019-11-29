@@ -1,0 +1,80 @@
+Archivo Program.cs
+/* Inicia Aqui
+using System;
+using prueba1;
+
+namespace Prueba1
+
+{
+    class MainClass
+
+    {
+
+        public static void Main(String[] args)
+        {
+
+
+            Rutinas mc = new Rutinas();
+            mc.saludarUsuario();
+            int[] vector = mc.crearArreglo();
+            mc.inicializaArreglo(vector);
+            mc.mostrarContenido(vector);
+
+
+
+        }
+    }
+}
+   Termina Aqui Program.cs      */
+   
+   //Aqui inicia el codigo de la clase Rutinas.cs que es un archivo externo
+   using System;
+
+namespace prueba1
+{
+    public class Rutinas
+    {
+       
+            public void saludarUsuario()
+            {
+                Console.Write("Escribe tu nombre: ");
+                String nombre = Console.ReadLine();
+                Console.WriteLine("Hola {0}, que tengas un excelente día", nombre);
+            }
+
+            public int[] crearArreglo()
+            {
+                Console.Write("Escribe la dimensión del vector: ");
+                int n = int.Parse(Console.ReadLine());//Da valor a la dimensión del vector
+                int[] vector = new int[n];
+                return vector;
+
+            }
+            public void inicializaArreglo(int[] arreglo)
+
+            {
+                for (int x = 0; x < arreglo.Length; x = x + 1) //Inicia el ciclo de captura del vector
+                {
+                    Console.Write("Teclea el ValorVector {0}: ", x);
+                    int numero = int.Parse(Console.ReadLine()); //Captura cada valor del Vector
+                    arreglo[x] = numero;
+                }
+
+            }
+
+            public void mostrarContenido(int[] arreglo)
+            {
+                for (int x = 0; x < arreglo.Length; x = x + 1) // x=x+1 se puede reemplazar por x++
+                    Console.WriteLine("Los valores capturados son :[{0}] ", arreglo[x]);
+
+                Console.Write("Oprime una tecla para continuar: ");
+                Console.ReadKey();
+
+
+            }
+       
+    }
+    
+
+}
+
